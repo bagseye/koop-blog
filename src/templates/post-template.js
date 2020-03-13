@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
@@ -12,17 +11,22 @@ const PostTemplate = ({ data }) => {
   return (
     <Layout>
       <section>
-        <Link to="/">Back to all posts</Link>
+        <Link className="btn" to="/">
+          Back to all posts
+        </Link>
         <div>
           <h1>{title}</h1>
           <h4>
-            <span>by {author}</span> / <span>{date}</span>
+            <span>Written by {author}</span> & Posted on <span>{date}</span>
           </h4>
         </div>
         <image fluid={img} />
         <div>
           <MDXRenderer>{body}</MDXRenderer>
         </div>
+        <h4>
+          <span>Written by {author}</span> & Posted on <span>{date}</span>
+        </h4>
       </section>
     </Layout>
   )
