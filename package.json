@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "koop-blog",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A simple blog platform using GatsbyJS and MDX",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -36,9 +36,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/bagseye/koop-blog"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/bagseye/koop-blog/issues"
   }
 }

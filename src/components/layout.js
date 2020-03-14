@@ -15,15 +15,6 @@ body {
   padding: 2rem 1.5rem;
 }
 
-.code {
-    background: orange;
-    display: inline-block;
-    padding: 1rem;
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 2rem 0;
-}
-
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -95,6 +86,14 @@ const layout = ({ children }) => {
           rel="noopener noreferrer"
         >
           @bagseye
+        </a>{" "}
+        | Enquiries{" "}
+        <a
+          href="https://www.linkedin.com/in/morgan-baker-developer-inverness/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @Morgan
         </a>
       </footer>
     </>
