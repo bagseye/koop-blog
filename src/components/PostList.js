@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import PostCard from "./PostCard"
 import styled from "styled-components"
+import { motion, useViewportScroll } from "framer-motion"
 
 const List = styled.div`
   @media (min-width: 600px) {
@@ -11,11 +12,16 @@ const List = styled.div`
 `
 
 const PostList = ({ posts }) => {
-  console.log(posts)
   return (
     <>
       <section>
-        <h1>Koop</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, ease: "easeOut", duration: 0.5 }}
+        >
+          Koop
+        </motion.h1>
         <h2>A personal blog template that uses GatsbyJS and MDX.</h2>
         <List>
           {posts.map(({ node }, index) => {
