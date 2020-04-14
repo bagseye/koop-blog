@@ -22,7 +22,10 @@ const PostList = ({ posts }) => {
         >
           Koop
         </motion.h1>
-        <h2>A personal blog template that uses GatsbyJS and MDX.</h2>
+        <h2>
+          The latest & greatest high-perfomance vehicles from around the world.
+          Filled with all the information you need to make the right choice.
+        </h2>
         <List>
           {posts.map(({ node }, index) => {
             return <PostCard key={index} post={node} />
