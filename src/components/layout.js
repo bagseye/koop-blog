@@ -81,11 +81,11 @@ const layout = ({ children }) => {
       <footer>
         Designed and built by{" "}
         <a
-          href="https://github.com/bagseye"
+          href="https://www.morganbaker.dev"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @bagseye
+          Morgan Baker
         </a>{" "}
         | Enquiries{" "}
         <a
