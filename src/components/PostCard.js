@@ -2,6 +2,7 @@ import React from "react"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Anim from "./Anim"
 
 const Card = styled.article`
   margin-top: 2.5rem;
@@ -44,16 +45,18 @@ const PostCard = ({ post }) => {
 
   return (
     <Card>
-      <Link to={slug}>
-        <Image className="card-image" fluid={img} />
-        <h2>{title}</h2>
-        <p>{post.excerpt}</p>
-        <Meta>
-          <h4>Written by {author}</h4>
-          <h4>Posted on {date}</h4>
-          <div className="btn">Read Article</div>
-        </Meta>
-      </Link>
+      <Anim>
+        <Link to={slug}>
+          <Image className="card-image" fluid={img} />
+          <h2>{title}</h2>
+          <p>{post.excerpt}</p>
+          <Meta>
+            <h4>Written by {author}</h4>
+            <h4>Posted on {date}</h4>
+            <div className="btn">Read Article</div>
+          </Meta>
+        </Link>
+      </Anim>
     </Card>
   )
 }
