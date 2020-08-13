@@ -1,5 +1,6 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
+import { Helmet } from "react-helmet"
 import "typeface-heebo"
 
 const GlobalStyle = createGlobalStyle`
@@ -77,6 +78,10 @@ const layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Koop Blog</title>
+      </Helmet>
       <main>{children}</main>
       <footer>
         Designed and built by{" "}
