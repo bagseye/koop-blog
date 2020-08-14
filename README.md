@@ -86,3 +86,9 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Components
+
+### SEO
+
+The SEO component included is based on the example found on the [Gatsby website](https://www.gatsbyjs.com/docs/add-seo-component/#reach-skip-nav). You can update the defualt parameters in `gatsby-config.js`.
