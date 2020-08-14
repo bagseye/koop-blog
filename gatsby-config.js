@@ -6,14 +6,17 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Koop Blog`,
+    titleTemplate: `%s | A simple MDX blog`,
+    description: `Built using GatsbyJS and serving content using markdown`,
+    url: `https://koop-blog.netlify.app`, // Cannot include a trailing slash
+    image: `/images/macbook.jpg`,
+    twitterUsername: `@twitter`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-html-attributes`,
-      options: {
-        lang: "en",
-      },
-    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

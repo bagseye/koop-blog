@@ -1,7 +1,7 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
-import { Helmet } from "react-helmet"
 import "typeface-heebo"
+import SEO from "../components/Seo"
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -78,10 +78,11 @@ const layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Helmet>
+      {/* <Helmet>
         <meta charSet="utf-8" />
         <title>Koop Blog</title>
-      </Helmet>
+      </Helmet> */}
+      <SEO />
       <main>{children}</main>
       <footer>
         Designed and built by{" "}
