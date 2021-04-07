@@ -2,6 +2,7 @@ import React from "react"
 import { createGlobalStyle } from "styled-components"
 import "typeface-heebo"
 import SEO from "../components/Seo"
+import Footer from "./Footer"
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -64,44 +65,15 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
-footer {
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  a {
-    color: var(--highlight);
-  }
-}
 `
 
 const layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      {/* <Helmet>
-        <meta charSet="utf-8" />
-        <title>Koop Blog</title>
-      </Helmet> */}
       <SEO />
       <main>{children}</main>
-      <footer>
-        Designed and built by{" "}
-        <a
-          href="https://www.morganbaker.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Morgan Baker
-        </a>{" "}
-        | Enquiries{" "}
-        <a
-          href="https://www.linkedin.com/in/morgan-baker-developer-inverness/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @Morgan
-        </a>
-      </footer>
+      <Footer />
     </>
   )
 }
