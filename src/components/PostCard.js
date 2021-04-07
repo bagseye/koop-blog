@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Anim from "./Anim"
@@ -41,13 +41,13 @@ const Meta = styled.div`
 const PostCard = ({ post }) => {
   const { title, date, author, slug } = post.frontmatter
 
-  const img = post.frontmatter.image.childImageSharp.fluid
+  const img = post.frontmatter.image.childImageSharp.gatsbyImageData
 
   return (
     <Card>
       <Anim>
         <Link to={slug}>
-          <Image className="card-image" fluid={img} />
+          <GatsbyImage image={img} className="card-image" />
           <h2>{title}</h2>
           <p>{post.excerpt}</p>
           <Meta>
@@ -58,7 +58,7 @@ const PostCard = ({ post }) => {
         </Link>
       </Anim>
     </Card>
-  )
+  );
 }
 
 export default PostCard
