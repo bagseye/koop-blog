@@ -1,12 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const PostTemplate = ({ data }) => {
   const { title, date, author, image } = data.mdx.frontmatter
   const { body } = data.mdx
-  const img = image.childImageSharp.gatsbyImageData
+  const img = getImage(image.childImageSharp.gatsbyImageData)
 
   return (
     <Layout>
@@ -20,7 +21,7 @@ const PostTemplate = ({ data }) => {
             <span>Written by {author}</span> & Posted on <span>{date}</span>
           </h4>
         </div>
-        <image fluid={img} />
+        <GatsbyImage image={img} alt="Blog Post" />
         <div>
           <MDXRenderer>{body}</MDXRenderer>
         </div>
@@ -32,22 +33,23 @@ const PostTemplate = ({ data }) => {
   )
 }
 
-export const query = graphql`query getPost($slug: String!) {
-  mdx(frontmatter: {slug: {eq: $slug}}) {
-    frontmatter {
-      title
-      slug
-      date(formatString: "MMMM Do, YYYY")
-      author
-      image {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+export const query = graphql`
+  query getPost($slug: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        slug
+        date(formatString: "MMMM Do, YYYY")
+        author
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
       }
+      body
     }
-    body
   }
-}
 `
 
 export default PostTemplate
