@@ -6,7 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 const PostTemplate = ({ data }) => {
   const { title, date, author, image } = data.mdx.frontmatter
   const { body } = data.mdx
-  const img = image.childImageSharp.fluid
+  const img = image.childImageSharp.gatsbyImageData
 
   return (
     <Layout>
@@ -32,25 +32,22 @@ const PostTemplate = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query getPost($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        slug
-        date(formatString: "MMMM Do, YYYY")
-        author
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+export const query = graphql`query getPost($slug: String!) {
+  mdx(frontmatter: {slug: {eq: $slug}}) {
+    frontmatter {
+      title
+      slug
+      date(formatString: "MMMM Do, YYYY")
+      author
+      image {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
-      body
     }
+    body
   }
+}
 `
 
 export default PostTemplate
