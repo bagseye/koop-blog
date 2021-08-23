@@ -1,8 +1,9 @@
 import React from "react"
 import { createGlobalStyle } from "styled-components"
 import "typeface-heebo"
-import SEO from "../components/Seo"
+import Seo from "../components/Seo"
 import Footer from "./Footer"
+import { motion } from "framer-motion"
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -67,15 +68,22 @@ footer {
 }
 `
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <SEO />
-      <main>{children}</main>
-      <Footer />
+      <Seo />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.25 }}
+      >
+        <main>{children}</main>
+        <Footer />
+      </motion.div>
     </>
   )
 }
 
-export default layout
+export default Layout

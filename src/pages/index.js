@@ -31,7 +31,7 @@ const getPosts = graphql`
   }
 `
 
-export default () => {
+const Index = () => {
   const response = useStaticQuery(getPosts)
 
   const posts = response.allMdx.edges
@@ -42,3 +42,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Index
