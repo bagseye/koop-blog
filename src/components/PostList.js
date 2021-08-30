@@ -16,7 +16,6 @@ const PostList = ({ posts }) => {
     <>
       <section>
         <Anim>
-          <h1>Koop</h1>
           <h2>
             The latest & greatest high-perfomance vehicles from around the
             world. Filled with all the information you need to make the right
