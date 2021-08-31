@@ -13,6 +13,8 @@ module.exports = {
     siteUrl: `https://koop-blog.netlify.app`, // Cannot include a trailing slash
     image: `/images/macbook.jpg`,
     twitterUsername: `@twitter`,
+    facebookName: `https://www.facebook.com`,
+    instagramName: `https://www.instagram.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
