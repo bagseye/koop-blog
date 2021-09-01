@@ -1,7 +1,5 @@
 import React, { useState } from "react"
-import { Link, useStaticQuery } from "gatsby"
-import "normalize.css"
-import "typeface-heebo"
+import { Link } from "gatsby"
 import Seo from "../components/Seo"
 import Footer from "./Footer/Footer"
 import { motion } from "framer-motion"
@@ -10,12 +8,14 @@ import Header from "./Header/Header"
 import Burger from "./Burger/Burger"
 import SideMenu from "./SideMenu/SideMenu"
 import GlobalStyles from "../styles/GlobalStyles"
+import Typography from "../styles/Typography"
 
 const Layout = ({ children }) => {
   const [open, setOpen] = useState(false)
   return (
     <>
       <GlobalStyles />
+      <Typography />
       <Seo />
       <motion.div
         initial={{ opacity: 0 }}

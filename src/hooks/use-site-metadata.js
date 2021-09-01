@@ -10,6 +10,8 @@ export const useSiteMetadata = () => {
             siteUrl
             description
             image
+            siteAuthor
+            siteAuthorUrl
             twitterUsername
             facebookName
             instagramName

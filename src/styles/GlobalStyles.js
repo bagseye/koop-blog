@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import "normalize.css"
 
 const GlobalStyles = createGlobalStyle`
 :root {
@@ -24,33 +25,19 @@ body {
   padding: 2rem 1.5rem;
   margin: 0;
   padding: 150px 0 0 0;
-}
 
-h1,
-.title__main {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--dark);
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  letter-spacing: -2px;
-  line-height: 1.1em;
-
-  &:after {
-    content: '.';
-    display: inline-block;
-    color: var(--highlight);
+  &::-webkit-scrollbar {
+      width: 12px;
   }
-}
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--grey);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.25em;
-  letter-spacing: -0.5px;
+  &::-webkit-scrollbar-track {
+      background: var(--highlight);
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: var(--dark);
+      border-radius: 0px;
+  }
 }
 
 .gatsby-resp-image-wrapper {
