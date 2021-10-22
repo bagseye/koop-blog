@@ -19,6 +19,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "framer-motion": "^1.11.1",
     "gatsby": "^4.0.0-zz-next.1",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^2.0.0-zz-next.1",
     "gatsby-plugin-mdx": "^3.0.0-zz-next.1",
     "gatsby-plugin-react-helmet": "^5.0.0-zz-next.1",
@@ -29,16 +30,16 @@
     "gatsby-source-filesystem": "^4.0.0-zz-next.1",
     "gatsby-transformer-sharp": "^4.0.0-zz-next.1",
     "normalize.css": "^8.0.1",
-    "react": "^16.14.0",
+    "react": "^17.0.2",
     "react-cookie-consent": "^6.3.0",
-    "react-dom": "^16.14.0",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.32.1",
     "styled-components": "^5.3.1",
-    "typeface-heebo": "0.0.72"
+    "typeface-heebo": "^1.1.13"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^2.3.2"
   },
   "repository": {
     "type": "git",
