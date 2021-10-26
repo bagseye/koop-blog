@@ -21,12 +21,17 @@ const Typography = createGlobalStyle`
 
     h2 {
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--grey);
     margin-top: 1rem;
     margin-bottom: 1rem;
     line-height: 1.25em;
     letter-spacing: -0.5px;
+    }
+
+    p {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
     }
 `
 

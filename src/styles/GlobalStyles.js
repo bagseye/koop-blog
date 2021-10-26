@@ -3,6 +3,7 @@ import "normalize.css"
 
 const GlobalStyles = createGlobalStyle`
 :root {
+  font-size: 16px;
   --dark: #2b2b2b;
   --grey: #7c7c7c;
   --highlight: #0075FF;
@@ -25,6 +26,8 @@ body {
   padding: 2rem 1.5rem;
   margin: 0;
   padding: 150px 0 0 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
 
   &::-webkit-scrollbar {
       width: 12px;
@@ -61,6 +64,20 @@ main {
   margin-left: auto;
   margin-right: auto;
   padding: 30px 30px 0 30px;
+}
+
+hr {
+  &.separator {
+    height: 3px;
+    border: none;
+    background-color: #000;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    &.separator__large {
+      height: 6px;
+    }
+  }
 }
 `
 

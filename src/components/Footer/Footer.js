@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <FooterStyles>
       <h2 style={{ marginTop: "0px" }} className="title__main">
-        {title}
+        <Link to="/">{title}</Link>
       </h2>
       <div className="container">
         <ul>

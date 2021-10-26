@@ -3,6 +3,21 @@ import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import styled from "styled-components"
+import PropTypes from "prop-types"
+
+const PostTemplateStyles = styled.section`
+  h1,
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .post__body {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+`
 
 const PostTemplate = ({ data }) => {
   const { title, date, author, image } = data.mdx.frontmatter
@@ -11,24 +26,27 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <section>
+      <PostTemplateStyles>
+        <hr style={{ marginTop: 0 }} class="separator separator__large" />
         <Link className="btn" to="/">
           Back to all posts
         </Link>
-        <div>
-          <h1>{title}</h1>
-          <h4>
-            <span>Written by {author}</span> & Posted on <span>{date}</span>
-          </h4>
-        </div>
+        <hr class="separator" />
+        <h1>{title}</h1>
+        <h2>
+          <span>Written by {author}</span> & Posted on <span>{date}</span>
+        </h2>
+
         <GatsbyImage image={img} alt="Blog Post" />
-        <div>
+        <div className="post__body">
           <MDXRenderer>{body}</MDXRenderer>
         </div>
-        <h4>
-          <span>Written by {author}</span> & Posted on <span>{date}</span>
-        </h4>
-      </section>
+        <hr class="separator" />
+        <h2>
+          Posted on <span>{date}</span>
+        </h2>
+        <hr class="separator separator__large" />
+      </PostTemplateStyles>
     </Layout>
   )
 }
@@ -53,3 +71,10 @@ export const query = graphql`
 `
 
 export default PostTemplate
+
+PostTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  date: PropTypes.string,
+  author: PropTypes.string,
+  image: PropTypes.object,
+}

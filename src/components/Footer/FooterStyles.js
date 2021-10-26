@@ -14,13 +14,12 @@ export const FooterStyles = styled.footer`
       text-decoration-color: #222;
     }
   }
-  padding: 25px 30px;
-  background-color: #f2f2f2;
+  margin-top: 5rem;
+  padding: 0 30px 2rem 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #e1e1e1;
   color: #222;
 
   .container {
@@ -32,6 +31,19 @@ export const FooterStyles = styled.footer`
 
       li {
         padding: 10px 6px;
+      }
+    }
+  }
+
+  h2 {
+    a {
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      a {
+        color: var(--highlight);
       }
     }
   }
