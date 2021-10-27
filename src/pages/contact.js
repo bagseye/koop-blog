@@ -5,7 +5,9 @@ const ContactPage = () => {
   return (
     <>
       <Layout>
+        <hr className="separator separator__large" />
         <h1>Get in touch</h1>
+        <hr className="separator" />
         <h2>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius,
           aliquam ex dignissimos sint culpa sit assumenda veritatis ipsam?

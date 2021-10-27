@@ -3,6 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Anim from "./Anim"
+import PropTypes from "prop-types"
 
 const Card = styled.article`
   margin-top: 2.5rem;
@@ -62,3 +63,7 @@ const PostCard = ({ post }) => {
 }
 
 export default PostCard
+
+PostCard.propTypes = {
+  post: PropTypes.object.isRequired,
+}
