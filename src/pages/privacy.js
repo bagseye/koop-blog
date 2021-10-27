@@ -4,9 +4,7 @@ import Layout from "../components/layout"
 const PrivacyPage = () => {
   return (
     <Layout>
-      <hr className="separator separator__large" />
       <h1>Privacy Statement</h1>
-      <hr className="separator" />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sequi
         nulla ipsam, eum doloremque eaque illum reprehenderit consequatur

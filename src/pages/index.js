@@ -47,12 +47,6 @@ const Index = (props) => {
 
   return (
     <Layout>
-      <hr className="separator separator__large" />
-      <h1>
-        Powered by GatsbyJS <br />
-        and MDX
-      </h1>
-      <hr className="separator" />
       <PostList posts={posts} />
       <h3>Did you know?</h3>
       <p>{`In ${props.serverData[1]} ${driverFirstname} ${driverSurname} of ${driverTeam} won the Formula 1 Drivers Championship with ${driverPoints} points.`}</p>

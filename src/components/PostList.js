@@ -2,7 +2,6 @@ import React from "react"
 import PostCard from "./PostCard"
 import styled from "styled-components"
 import Anim from "./Anim"
-import PropTypes from "prop-types"
 
 const List = styled.div`
   @media (min-width: 600px) {
@@ -35,7 +34,3 @@ const PostList = ({ posts }) => {
 }
 
 export default PostList
-
-PostList.propTypes = {
-  posts: PropTypes.object.isRequired,
-}
