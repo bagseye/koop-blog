@@ -17,6 +17,7 @@ module.exports = {
     twitterUsername: `@twitter`,
     facebookName: `https://www.facebook.com`,
     instagramName: `https://www.instagram.com`,
+    linkedinName: `https://www.linkedin.com/in/morgan-baker-development`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

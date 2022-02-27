@@ -11,6 +11,7 @@ const Footer = () => {
     twitterUsername,
     facebookName,
     instagramName,
+    linkedinName,
     siteAuthor,
     siteAuthorUrl,
   } = useSiteMetadata()
@@ -35,6 +36,12 @@ const Footer = () => {
           <li>
             <a href={instagramName} target="_blank" rel="noreferrer nofollow">
               Instagram
+            </a>
+          </li>
+
+          <li>
+            <a href={linkedinName} target="_blank" rel="noreferrer nofollow">
+              LinkedIn
             </a>
           </li>
         </ul>

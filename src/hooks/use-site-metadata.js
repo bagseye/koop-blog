@@ -15,6 +15,7 @@ export const useSiteMetadata = () => {
             twitterUsername
             facebookName
             instagramName
+            linkedinName
           }
         }
       }
